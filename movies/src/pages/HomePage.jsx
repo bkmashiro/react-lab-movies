@@ -3,6 +3,13 @@ import MovieList from "../components/movieList";
 import Grid from "@mui/material/Grid2";
 import Header from "../components/headerMovieList";
 import FilterCard from "../components/filterMoviesCard";
+import MovieDetailsPage from "../components/movieDetails";
+const images = [
+  "/kOVEVeg59E0wsnXmF9nrh6OmWII.jpg",
+  "/v1QQKq8M0fWxMgSdGOX1aCv8qMB.jpg",
+  "/2iGN0aKHJYD0xQydlfuCUAcgNbO.jpg",
+  "/rjBwhsOzHKUw2NIOrE7aMqjfe6s.jpg",
+];
 
 const HomePage = (props) => {
   const [movies, setMovies] = useState([]);
