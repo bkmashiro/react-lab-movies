@@ -17,13 +17,13 @@ import React, { useContext } from "react";
 import { MoviesContext } from "../../contexts/moviesContext";
 
 export default function MovieCard({ movie, action }) {
-  const { favorites, addToFavorites } = useContext(MoviesContext);
+  // const { favorites, addToFavorites } = useContext(MoviesContext);
   // const movie = props.movie;
-  if (favorites.find((id) => id === movie.id)) {
-    movie.favorite = true;
-  } else {
-    movie.favorite = false;
-  }
+  // if (favorites.find((id) => id === movie.id)) {
+  //   movie.favorite = true;
+  // } else {
+  //   movie.favorite = false;
+  // }
 
   // const handleAddToFavorite = (e) => {
   //   e.preventDefault();
