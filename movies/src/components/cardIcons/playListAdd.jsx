@@ -4,8 +4,12 @@ import IconButton from "@mui/material/IconButton";
 import PlaylistAdd from "@mui/icons-material/PlaylistAdd";
 
 const AddToPlayList = ({ movie }) => {
+  const context = useContext(MoviesContext);
+
   const handleAddToPlaylist = (e) => {
-    console.log("Add to playlist: ", movie);
+    console.log("Adding to playlist: ", movie);
+    context.addMovieToPlayList(movie);
+    console.log("PlayList: ", context.playList);
   };
 
   return (
