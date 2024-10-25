@@ -1,4 +1,3 @@
-import React from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -19,7 +18,7 @@ import { MoviesContext } from "../../contexts/moviesContext";
 
 export default function MovieCard(props) {
   const { favorites, addToFavorites } = useContext(MoviesContext);
-
+  const movie = props.movie;
   if (favorites.find((id) => id === movie.id)) {
     movie.favorite = true;
   } else {
@@ -30,7 +29,7 @@ export default function MovieCard(props) {
     e.preventDefault();
     addToFavorites(movie);
   };
-  
+
   return (
     <Card>
       <CardHeader
