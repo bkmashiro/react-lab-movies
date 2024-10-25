@@ -9,7 +9,7 @@ const MovieList = (props) => {
       size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 2 }}
       sx={{ padding: "20px" }}
     >
-      <Movie key={m.id} movie={m} selectFavorite={props.selectFavorite} />
+      <Movie key={m.id} movie={m} action={props.action} />
     </Grid>
   ));
   return movieCards;
