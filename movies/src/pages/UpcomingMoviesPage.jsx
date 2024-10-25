@@ -6,6 +6,7 @@ import { getUpcomingMovies } from "../api/tmdb-api";
 import Spinner from "../components/spinner";
 import RemoveFromFavorites from "../components/cardIcons/removeFromFavorites";
 import WriteReview from "../components/cardIcons/writeReview";
+import AddToPlayList from "../components/cardIcons/playListAdd";
 
 const UpcomingMoviesPage = () => {
   // Create an array of queries and run in parallel.
@@ -20,7 +21,7 @@ const UpcomingMoviesPage = () => {
 
   console.log(upcomingMovieQueries.data);
 
-  const movies = upcomingMovieQueries.data.results
+  const movies = upcomingMovieQueries.data.results;
 
   return (
     <PageTemplate
@@ -29,8 +30,9 @@ const UpcomingMoviesPage = () => {
       action={(movie) => {
         return (
           <>
-            <RemoveFromFavorites movie={movie} />
-            <WriteReview movie={movie} />
+            {/* <RemoveFromFavorites movie={movie} />
+            <WriteReview movie={movie} /> */}
+            <AddToPlayList movie={movie} />
           </>
         );
       }}
